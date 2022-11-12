@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import Chip from "../common/Chip/Chip";
+import Chip from "../Common/Chip/Chip";
 import "./BlogItem.css";
 import dayjs from "dayjs";
 
