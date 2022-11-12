@@ -30,8 +30,12 @@ app.use(express.static(path.join(__dirname, "uploads")));
 
 loadSeedData();
 
-// CONNECTION URL ON LOCALHOST (OFFLINE)
-mongoose.connect("mongodb://localhost:27017/MissB", function (err) {
+//imports all routes from routes folder
+app.use("/auth", userRouter);
+app.use("/api", postRouter);
+
+// CONNECT THE MONGO DB ONLINE
+mongoose.connect(process.env.MONGODB_URL, function (err) {
   if (err) {
     console.error("Failed to connect", err);
   } else {
@@ -39,18 +43,5 @@ mongoose.connect("mongodb://localhost:27017/MissB", function (err) {
   }
 });
 
-//imports all routes from routes folder
-app.use("/auth", userRouter);
-app.use("/api", postRouter);
-
 const port = process.env.PORT || 8000;
 app.listen(port, () => console.log(`Server running at port ${port}`));
-
-// CONNECT THE MONGO DB ONLINE
-// mongoose.connect(process.env.MONGODB_URL, function (err) {
-//   if (err) {
-//     console.error("Failed to connect", err);
-//   } else {
-//     console.log("connected");
-//   }
-// });
