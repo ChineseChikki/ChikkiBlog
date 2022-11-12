@@ -1,5 +1,5 @@
 const userModel = require("../server/model/blogUser");
-
+const bcrypt = require("bcryptjs");
 module.exports = () => {
   const seeds = [
     {
@@ -19,12 +19,11 @@ module.exports = () => {
   ];
 
   seeds.map(uploadSeedsToDatabase);
-
   function uploadSeedsToDatabase(data) {
     userModel.findOne({ email: data.email }).then((user) => {
       if (!user) {
         userModel
-          .create(data)
+          .create({ ...data, password: bcrypt.hashSync(data.password) })
           .then((data) => {
             console.log(data.name.toUpperCase(), "created successfully");
           })

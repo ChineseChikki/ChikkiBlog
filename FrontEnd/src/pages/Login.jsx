@@ -82,7 +82,7 @@ const Login = () => {
               style={{
                 borderRadius: "1rem",
                 maxWidth: "400px",
-                height: "70vh",
+                height: "73vh",
               }}
             >
               <MDBCardBody className="p-5 d-flex flex-column align-items-center mx-auto w-100">

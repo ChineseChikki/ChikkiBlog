@@ -53,13 +53,9 @@ const Register = () => {
         loading: false,
         isError: !jsonResponse.success,
       }));
-      if (jsonResponse.success)
+      if (jsonResponse.success) {
         setTimeout(() => {
           navigate("/login");
-        }, 1000);
-      else {
-        setTimeout(() => {
-          navigate("/signup");
         }, 1000);
       }
     } catch (err) {
@@ -79,7 +75,7 @@ const Register = () => {
       >
         <MDBCard
           className="m-4 bg-dark text-white"
-          style={{ maxWidth: "400px", height: "75vh", borderRadius: "1rem" }}
+          style={{ maxWidth: "400px", height: "79vh", borderRadius: "1rem" }}
         >
           <MDBCardBody className="px-4 d-flex flex-column align-items-center mx-auto w-100">
             <h2

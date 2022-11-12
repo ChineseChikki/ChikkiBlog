@@ -8,10 +8,10 @@ export default function Profile({ open, setOpen, setUser }) {
 
   useEffect(() => {
     if (localStorage.getItem("user")) {
-      const { firstName, lastName, email, role } = JSON.parse(
+      const { name, username, email, role } = JSON.parse(
         localStorage.getItem("user")
       );
-      setPayload((state) => ({ firstName, lastName, email, role }));
+      setPayload((state) => ({ name, username, email, role }));
       setUser(payload);
     }
   }, [open]);
@@ -54,16 +54,16 @@ export default function Profile({ open, setOpen, setUser }) {
       >
         <div {...{ className }}>
           <label
-            htmlFor="firstName"
+            htmlFor="name"
             className="block mt-2 mb-1 text-sm font-medium text-gray-700"
           >
-            First Name
+            Name
           </label>
           <input
             type="text"
-            name="firstName"
-            id="firstName"
-            value={payload.firstName}
+            name="name"
+            id="name"
+            value={payload.name}
             onChange={handleChange}
             minLength="3"
             required
@@ -73,16 +73,16 @@ export default function Profile({ open, setOpen, setUser }) {
 
         <div {...{ className }}>
           <label
-            htmlFor="lastName"
+            htmlFor="username"
             className="block mt-2 mb-1 text-sm font-medium text-gray-700"
           >
-            Last Name
+            Username
           </label>
           <input
-            value={payload.lastName}
+            value={payload.username}
             onChange={handleChange}
             type="text"
-            name="lastName"
+            name="username"
             id="lastName"
             minLength="3"
             required
@@ -140,9 +140,9 @@ export default function Profile({ open, setOpen, setUser }) {
             name="role"
             id="role"
             minLength="5"
-            value={payload.password}
+            value={payload.role}
             onChange={handleChange}
-            required
+            disabled
             className="block w-full rounded-md border-gray-300 border px-3 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           />
         </div>

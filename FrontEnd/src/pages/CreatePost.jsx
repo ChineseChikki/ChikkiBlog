@@ -77,7 +77,7 @@ function CreatePost() {
         <h1 className="text-xl">Create New Post</h1>
         <br />
         <div className="w-full">
-          <label htmlFor="" className="text-left block ml-2">
+          <label htmlFor="" className="text-left block ml-2 ">
             Title
           </label>
           <input
