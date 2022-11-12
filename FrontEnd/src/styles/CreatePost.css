@@ -1,0 +1,52 @@
+.chikki {
+  background: #000;
+}
+
+.create__post {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.createPost__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  padding: 30px;
+  gap: 5px;
+}
+
+h1 {
+  display: flex;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 15px 8px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 5px;
+  height: 200px;
+}
+
+.my_btn {
+  height: 50px;
+  width: 110% !important;
+  align-items: center;
+  margin-bottom: 100px;
+  margin-left: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: skyblue;
+}

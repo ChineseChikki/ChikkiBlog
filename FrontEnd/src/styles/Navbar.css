@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  font-size: 20px;
+  background-color: black;
+}
+
+.navbar .h2 {
+  color: white;
+  word-spacing: -10px;
+}
+
+.navbar .span {
+  color: orangered;
+}
+
+.navbar_list ul {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.navbar_list li {
+  list-style: none;
+}
+
+.navbar_list a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: orangered;
+  border-bottom: 3px solid white;
+}

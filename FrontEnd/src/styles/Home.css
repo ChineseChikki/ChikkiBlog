@@ -1,0 +1,29 @@
+.home {
+  position: relative;
+}
+
+.home_image {
+  margin: auto;
+  max-height: 82vh;
+  display: block;
+}
+
+.home_para {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home_para h1 {
+  font-size: 45px;
+  font-style: italic;
+  text-shadow: 0 0 10px black;
+  color: white;
+}
+
+.home_para p {
+  font-size: 16px;
+  color: black;
+  font-weight: 900;
+}
