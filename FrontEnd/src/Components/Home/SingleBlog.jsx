@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Chip from "../common/Chip/Chip";
+import Chip from "../Common/Chip/Chip";
 import Empty from "../Common/EmptyList/Empty";
 import "./SingleBlog.css";
 
