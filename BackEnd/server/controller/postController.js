@@ -13,8 +13,7 @@ exports.createPost = async function (req, res) {
   // attaches the id of the user to the new blog
   newBlog.user = user;
 
-  newBlog.image =
-    req.protocol + "://" + req.hostname + ":" + 8000 + "/" + req.file.filename;
+  newBlog.image = req.protocol + "://" + req.hostname + "/" + req.file.filename;
   try {
     const post = await postModel.create(newBlog);
 
@@ -47,13 +46,7 @@ exports.updatePostById = async (req, res) => {
 
   if (req.file) {
     postToUpdate.image =
-      req.protocol +
-      "://" +
-      req.hostname +
-      ":" +
-      8000 +
-      "/" +
-      req.file.filename;
+      req.protocol + "://" + req.hostname + "/" + req.file.filename;
   }
 
   try {

@@ -19,7 +19,7 @@ export default function Profile({ open, setOpen, setUser }) {
   const action = {
     btnText: "Update",
     send: (e) => {
-      fetch("http://localhost:8000/auth/update", {
+      fetch("https://chikkiblog.onrender.com/auth/update", {
         method: "PUT",
         body: JSON.stringify(payload),
         headers: {
@@ -170,7 +170,7 @@ export default function Profile({ open, setOpen, setUser }) {
 //     btnText: "Update",
 //     send: (e) => {
 //       setSubmitting(true);
-//       fetch("http://localhost:8000/auth/update", {
+//       fetch("https://chikkiblog.onrender.com/auth/update", {
 //         method: "PUT",
 //         body: JSON.stringify(payload),
 //         headers: {

@@ -40,7 +40,7 @@ const Register = () => {
       isError: false,
     }));
     try {
-      const res = await fetch("http://localhost:8000/auth/signup", {
+      const res = await fetch("https://chikkiblog.onrender.com/auth/signup", {
         method: "post",
         body: JSON.stringify(payload),
         headers: { "content-type": "application/json" },

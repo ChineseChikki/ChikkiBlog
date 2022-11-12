@@ -32,11 +32,11 @@ function CreatePost() {
   }, [state]);
 
   if (state) {
-    action.url = "http://localhost:8000/api/update/" + state.id;
+    action.url = "https://chikkiblog.onrender.com/api/update/" + state.id;
     action.method = "PUT";
     console.log("Update");
   } else {
-    action.url = "http://localhost:8000/api/create";
+    action.url = "https://chikkiblog.onrender.com/api/create";
     action.method = "POST";
     console.log("Create");
   }

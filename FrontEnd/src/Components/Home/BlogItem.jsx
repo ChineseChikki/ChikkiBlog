@@ -21,7 +21,7 @@ const BlogItem = ({ blog, refresh }) => {
 
   function handleDelete() {
     if (confirm("Are you sure you want to delete this post?")) {
-      fetch("http://localhost:8000/api/delete/" + id, {
+      fetch("https://chikkiblog.onrender.com/api/delete/" + id, {
         method: "DELETE",
         headers: {
           authorization: localStorage.getItem("token"),

@@ -10,7 +10,7 @@ export default function Posts() {
   const [posts, setPosts] = useState([]);
 
   function getAllPosts() {
-    fetch("http://localhost:8000/api/all")
+    fetch("https://chikkiblog.onrender.com/api/all")
       .then((res) => res.json())
       .then(({ success, data }) => {
         console.log(data);
@@ -22,7 +22,7 @@ export default function Posts() {
   }
 
   useEffect(() => {
-    fetch("http://localhost:8000/auth/user", {
+    fetch("https://chikkiblog.onrender.com/auth/user", {
       headers: { authorization: localStorage.getItem("token") },
     })
       .then((res) => res.json())
