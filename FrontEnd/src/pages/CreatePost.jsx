@@ -12,6 +12,7 @@ function CreatePost() {
     title: "",
     image: "",
   });
+
   const handleChange = ({ target: { name, value, files } }) => {
     if (name === "image") value = files[0];
     setFormData((state) => ({ ...state, [name]: value }));

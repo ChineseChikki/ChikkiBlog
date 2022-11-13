@@ -34,11 +34,11 @@ const AppHelpers = () => {
           <Routes>
             <Route exact path="/" element={<Home />} />
 
-            <Route path="/register" element={<Register />} />
-
             <Route path="/blogs" element={<Blogs />} />
 
             <Route path="/singleBlog/:id" element={<SingleBlog />} />
+
+            <Route path="/register" element={<Register />} />
 
             <Route path="/login" element={<Login />} />
 

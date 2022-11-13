@@ -89,9 +89,9 @@ const Register = () => {
               style={{
                 color:
                   !state.isError && state.loading
-                    ? "black"
+                    ? "white"
                     : state.isError && !state.loading
-                    ? "tomato"
+                    ? "red"
                     : "green",
               }}
             >
@@ -157,7 +157,7 @@ const Register = () => {
               onChange={collectInputData}
               required
             />
-            <div className="d-flex flex-row text-white justify-content-center mb-4">
+            <div className="d-flex flex-row text-white justify-content-center mb-2">
               <MDBCheckbox
                 name="flexCheck"
                 id="flexCheckDefault"

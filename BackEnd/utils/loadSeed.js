@@ -9,6 +9,7 @@ module.exports = () => {
       password: "chikki",
       role: "superAdmin",
     },
+
     {
       name: "Lucy",
       username: "lulu",

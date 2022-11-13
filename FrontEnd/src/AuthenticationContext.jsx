@@ -17,6 +17,7 @@ const AuthenticationContext = (props) => {
   useEffect(() => {
     localStorage.setItem("isAuth", isLoggedIn);
   }, [isLoggedIn]);
+
   return (
     <Authentication.Provider value={{ isLoggedIn, logIn, logOut }}>
       {props.children}

@@ -12,9 +12,9 @@ const Home = () => {
         />
       </div>
       <div className="home_para">
-        <h1>Welcome to my Blog</h1>
+        <h1 className="text-center">Welcome to my Blog</h1>
         <br />
-        <p>
+        <p className="text-center">
           Chikki’s Blog is a tech blog in Nigeria that covers topics
           <br />
           on tech, digital marketing and online money making ideas.

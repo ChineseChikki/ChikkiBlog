@@ -6,7 +6,7 @@ const doesAUserExist = require("../middleWares/isUserExist");
 const upload = require("../../utils/imgUploader");
 const { json } = require("express");
 
-//FOR POST CONTROLLER PATHS
+//CONTROLLER PATHS
 router.post(
   "/create",
   authMiddleWare,
@@ -14,6 +14,7 @@ router.post(
   upload.single("image"),
   postController.createPost
 );
+
 router.put(
   "/update/:postId",
   authMiddleWare,
@@ -21,13 +22,16 @@ router.put(
   upload.single("image"),
   postController.updatePostById
 );
+
 router.delete(
   "/delete/:postId",
   authMiddleWare,
   doesAUserExist,
   postController.deletePostById
 );
+
 router.get("/all", postController.getPosts);
+
 router.get("/:postId", postController.getPost);
 
 module.exports = router;

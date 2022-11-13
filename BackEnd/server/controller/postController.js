@@ -4,12 +4,6 @@ const postModel = require("../model/blogPost");
 exports.createPost = async function (req, res) {
   const newBlog = req.body,
     user = res.locals.id;
-  // const newBlog = {
-  //     title: req.body.title,
-  //     post: req.body.post,
-  //   },
-  // user = res.locals.id;
-
   // attaches the id of the user to the new blog
   newBlog.user = user;
 

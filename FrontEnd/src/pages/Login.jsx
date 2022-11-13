@@ -82,7 +82,7 @@ const Login = () => {
               style={{
                 borderRadius: "1rem",
                 maxWidth: "400px",
-                height: "73vh",
+                height: "70vh",
               }}
             >
               <MDBCardBody className="p-5 d-flex flex-column align-items-center mx-auto w-100">
@@ -95,9 +95,9 @@ const Login = () => {
                   style={{
                     color:
                       !state.isError && state.loading
-                        ? "black"
+                        ? "white"
                         : state.isError && !state.loading
-                        ? "tomato"
+                        ? "red"
                         : "green",
                   }}
                 >
@@ -170,15 +170,6 @@ const Login = () => {
                   >
                     <MDBIcon fab icon="google" size="lg" />
                   </MDBBtn>
-                </div>
-
-                <div>
-                  <p className="mb-0">
-                    Don't have an account?
-                    <a href="#!" className="text-white-50 fw-bold">
-                      Sign Up
-                    </a>
-                  </p>
                 </div>
               </MDBCardBody>
             </MDBCard>
