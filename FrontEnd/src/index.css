@@ -24,10 +24,6 @@ input,
 textarea {
   color: black !important;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 a {
   text-decoration: none;
 }

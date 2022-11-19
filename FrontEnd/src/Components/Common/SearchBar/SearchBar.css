@@ -39,5 +39,6 @@
 
 .cross {
   color: red;
-  font-weight: bold;
+  font-weight: 300;
+  font-size: 16px;
 }
